@@ -22,7 +22,7 @@ namespace Fileshare.Logics.PnrpManager
         public void StartPeerRegistration(string username, int port)
         {
             PeerName = new PeerName(username, PeerNameType.Unsecured);
-            _peerNameRegistration = new PeerNameRegistration(PeerName, port);
+            _peerNameRegistration = new PeerNameRegistration(PeerName, port,Cloud.AllLinkLocal);
             _peerNameRegistration.Start(); /* bug here, does recognize peername? */
         }
 
